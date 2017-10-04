@@ -1,0 +1,144 @@
+	import java.util.ArrayList;
+import java.awt.*;  
+	import javax.swing.*;
+import javax.imageio.ImageIO;
+	import java.awt.event.ActionListener;
+	import java.awt.event.ActionEvent;
+	
+	public class RentProperty {
+		RentProperty(){}
+		
+		public void Rent()//ArrayList<Apartment> apartments,ArrayList<House> houses, ArrayList<Villa> villas ){
+				{ JFrame frame = new JFrame("MyBnB-rent");
+		    	frame.setLayout(new GridLayout(4, 3));
+		    	frame.setSize(200, 500);
+		    	
+		    	ImageIcon imageIcon = new ImageIcon(new ImageIcon("/Users/mansura.khan/Downloads/MyBnb/src/a.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+//		    	
+		    	JButton Appartment =new JButton(imageIcon);
+		    	
+		    	Appartment.addActionListener(new ActionListener()
+		    	{
+		    	  public void actionPerformed(ActionEvent e)
+		    	  {
+		    	    // display/center the jdialog when the button is pressed
+		    		  JFrame frame1 = new JFrame("MyBnB-rent-Appertment");
+		    		  frame1.setLayout(new GridLayout(5, 0));
+				    	frame1.setSize(300, 200);
+		    		    UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+		    	        frame1.getContentPane().add(new JLabel("Appartment no:"));
+		    	        JTextArea t1= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t1);
+		    	        frame1.getContentPane().add(new JLabel("Number of days:"));
+		    	        JTextArea t2= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t2);
+		    	        
+		    	        JButton b= new JButton("Confirm") ;
+		    	            b.addActionListener(new ActionListener()
+				    	{
+				    	  public void actionPerformed(ActionEvent e)
+				    	  { int aptNum=Integer.parseInt(t1.getText());
+				    	    int rentD=Integer.parseInt(t2.getText());
+//				    		  apartments.get(aptNum).RentProperty(rentD);
+				    	    System.out.print(aptNum+rentD);
+				    	  }
+				    	  });
+		    	            frame1.getContentPane().add(b);
+		    	            frame1.setVisible(true);
+		    		        frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		    	  
+		    	  }
+		    	});
+		    	Appartment.setSize(150,150);
+//		    	
+		    	ImageIcon imageIcon1 = new ImageIcon(new ImageIcon("/Users/mansura.khan/Downloads/MyBnb/src/a11.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+//			    
+		    	
+		    	JButton House =new JButton(imageIcon1);
+		    	House.setSize(150,150);
+		    	
+		    	House.addActionListener(new ActionListener()
+		    	{
+		    	  public void actionPerformed(ActionEvent e)
+		    	  {
+		    	    // display/center the jdialog when the button is pressed
+		    		  JFrame frame1 = new JFrame("MyBnB-rent-Appertment");
+		    		  frame1.setLayout(new GridLayout(5, 0));
+				    	frame1.setSize(300, 200);
+		    		    UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+		    	        frame1.getContentPane().add(new JLabel("House no:"));
+		    	        JTextArea t1= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t1);
+		    	        frame1.getContentPane().add(new JLabel("Number of days:"));
+		    	        JTextArea t2= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t2);
+		    	        
+		    	        JButton b= new JButton("Confirm") ;
+		    	            b.addActionListener(new ActionListener()
+				    	{
+				    	  public void actionPerformed(ActionEvent e)
+				    	  { int aptNum=Integer.parseInt(t1.getText());
+				    	    int rentD=Integer.parseInt(t2.getText());
+//				    		  House.get(aptNum).RentProperty(rentD);
+				    	    System.out.print(aptNum+rentD);
+				    	  }
+				    	  });
+		    	            frame1.getContentPane().add(b);
+		    	            frame1.setVisible(true);
+		    		        frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		    	  
+		    	  }
+		    	});
+		    	
+		    	
+		    	
+		    	
+		    	ImageIcon imageIcon2 = new ImageIcon(new ImageIcon("/Users/mansura.khan/Downloads/MyBnb/src/a1.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
+			    JButton Villa =new JButton(imageIcon2);
+			    Villa.addActionListener(new ActionListener()
+		    	{
+		    	  public void actionPerformed(ActionEvent e)
+		    	  {
+		    	    // display/center the jdialog when the button is pressed
+		    		  JFrame frame1 = new JFrame("MyBnB-rent-Appertment");
+		    		  frame1.setLayout(new GridLayout(5, 0));
+				    	frame1.setSize(300, 200);
+		    		    UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+		    	        frame1.getContentPane().add(new JLabel("Villa no:"));
+		    	        JTextArea t1= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t1);
+		    	        frame1.getContentPane().add(new JLabel("Number of days:"));
+		    	        JTextArea t2= new JTextArea(20,10);
+		    	        frame1.getContentPane().add(t2);
+		    	        
+		    	        JButton b= new JButton("Confirm") ;
+		    	            b.addActionListener(new ActionListener()
+				    	{
+				    	  public void actionPerformed(ActionEvent e)
+				    	  { int aptNum=Integer.parseInt(t1.getText());
+				    	    int rentD=Integer.parseInt(t2.getText());
+//				    		  Villa.get(aptNum).RentProperty(rentD);
+				    	    System.out.print(aptNum+rentD);
+				    	  }
+				    	  });
+		    	            frame1.getContentPane().add(b);
+		    	            frame1.setVisible(true);
+		    		        frame1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		    	  
+		    	  }
+		    	});
+			    
+		    	Villa.setSize(150,150);
+		    	
+		    
+		    	frame.getContentPane().add(Appartment);
+		    	frame.getContentPane().add(House);
+		    	frame.getContentPane().add(Villa);
+		    	
+		    	
+		    	
+		    	frame.setVisible(true);
+		        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
+		}
+
+	}

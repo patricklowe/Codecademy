@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+public class CalculateTotalIncome{
+	CalculateTotalIncome(){
+	}
+	
+	public int CalculateTotallIncome(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas ){
+    	int TotalRentalIncome = 0;
+        for(int i = 0; i<apartments.size(); i++)
+        	TotalRentalIncome += apartments.get(i).getTotalRentalDays() * apartments.get(i).getRentalCostPerDay();
+
+        return TotalRentalIncome;
+    }
+}

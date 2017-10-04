@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ */
+public class MySecret {
+
+	public static void main(String[] args) {
+		String user_Name = JOptionPane.showInputDialog("What is Your Name: ");
+		String programmer_Name = "Patrick";
+		
+		if(user_Name.equals(programmer_Name)) {
+			String user_Secret = JOptionPane.showInputDialog("Hi "+user_Name+"! Tell me a secret");
+			if(user_Secret.length() < 20) {
+				JOptionPane.showMessageDialog(null, "That is not much of a secret");
+			}// small secret
+			else {
+				JOptionPane.showMessageDialog(null, "That is a great secret! I'll never tell");
+			}// big secret
+		}// Same Names
+		else {
+			JOptionPane.showMessageDialog(null, "Hello "+user_Name+", nice to meet you.");
+		}// Different Names
+	}
+
+}

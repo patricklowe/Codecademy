@@ -1,0 +1,10 @@
+/*
+ * Author: Patrick Löwe
+ */
+public class MySecret {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

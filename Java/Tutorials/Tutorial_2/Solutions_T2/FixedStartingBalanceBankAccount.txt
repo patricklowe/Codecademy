@@ -1,0 +1,30 @@
+﻿/*
+ * Author: Fintan Costello & Alex Cronin
+ * Description: This program uses doubles variables to store the initial balance
+ * of a bank account and the value of a withdrawal. The remaining balance is
+ * calculated and displayed to the user with a JOptionPane message dialog box.
+ */
+
+import javax.swing.JOptionPane;
+
+public class FixedStartingBalanceBankAccount{  // class declaration 
+   public static void main(String[] args){     //main method
+
+    // set up the variables to be used to store the initial balance and withdrawal.
+    double initialBalance = 5000;
+	double withdrawal = 200;
+
+    //Declare an object of class BankAccount called myFirstAccount
+    // and initialize it with an initial balance.
+	BankAccount myFirstAccount = new BankAccount(initialBalance);
+
+    // call the withdraw method on myFirstAccount:
+    myFirstAccount.withdraw(withdrawal);
+
+	//Use a JOptionPane message dialog box to display the current balance to the user.
+    JOptionPane.showMessageDialog(null,"myTestAccount contains :"+myFirstAccount.getBalance() );
+
+    // exit the program correctly.
+	System.exit(0);
+   }
+}

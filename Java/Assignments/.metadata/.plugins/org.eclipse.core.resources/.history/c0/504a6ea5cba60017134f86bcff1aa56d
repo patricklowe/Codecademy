@@ -1,0 +1,24 @@
+public class Villa extends Property{
+	int NumberOfRooms;
+	int RoomServiceCostPerDay;
+	int TaxPerDay;
+	
+    public Villa(int NumberOfRooms, int RoomServiceCostPerDay, int TaxPerDay, int RentalCostPerDay, int TotalRentalDays, String Qwner, String PostalAddress) {
+		super(RentalCostPerDay,TotalRentalDays,Qwner,PostalAddress);
+		this.NumberOfRooms = NumberOfRooms;
+        this.RoomServiceCostPerDay=RoomServiceCostPerDay;
+        this.TaxPerDay=TaxPerDay;
+    }
+
+	public int getNumberOfRooms(){
+		return NumberOfRooms;
+	}
+	
+	public int getRoomServiceCostPerDay(){
+		return RoomServiceCostPerDay;
+	}
+	
+	public int getTaxPerDay(){
+		return TaxPerDay;
+	}
+}

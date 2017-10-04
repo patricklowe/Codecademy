@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.awt.*;  
+import javax.swing.*;
+
+public class PrintAllProperties {
+	PrintAllProperties(){}
+
+	
+	public  void PrintAllPropertiesUI(ArrayList<Apartment> apartments){
+    	
+	}

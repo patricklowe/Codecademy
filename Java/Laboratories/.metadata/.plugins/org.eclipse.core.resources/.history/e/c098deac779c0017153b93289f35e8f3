@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ * Program to compare 2 numbers
+ */
+public class Factors {// main class
+
+	public static void main(String[] args) { // main method
+		// capture user input into strings
+		String input_Num1 = JOptionPane.showInputDialog("Enter Number 1: ");
+		String input_Num2 = JOptionPane.showInputDialog("Enter Number 2: ");
+		// convert strings into type Integer
+		int Num1 = Integer.parseInt(input_Num1);
+		int Num2 = Integer.parseInt(input_Num2);
+		int lower;
+		int higher;
+		
+		// if statement depending on number comparisons
+		if(Num1 < Num2) {
+			lower = Num1;
+			higher = Num2;			
+		}// if num1 < num2
+		else{
+			lower = Num2;
+			higher = Num1;
+		}// Num2 is less
+		
+		
+	}// main method
+
+}// main class

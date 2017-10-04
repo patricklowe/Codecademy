@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ */
+class Person{ // Start of Person Class
+	String name = JOptionPane.showInputDialog("Enter Name: ");
+	String input_age = JOptionPane.showInputDialog("Enter Age: ");
+	int age = Integer.parseInt(input_age);
+	
+}// End of Person Class
+
+public class StorePeople { // Start of StorePeople Class
+
+	public static void main(String[] args) { // Main Method
+		
+	}// end of Main Method
+
+} // End of StorePeople Class

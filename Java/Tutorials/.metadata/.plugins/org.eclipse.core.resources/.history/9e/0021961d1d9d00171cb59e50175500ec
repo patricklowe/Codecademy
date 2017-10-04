@@ -1,0 +1,16 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ */
+class Person(String name, int age){ // Start of Person Class
+	
+}// End of Person Class
+
+public class StorePeople { // Start of StorePeople Class
+
+	public static void main(String[] args) { // Main Method
+		
+	}// end of Main Method
+
+} // End of StorePeople Class

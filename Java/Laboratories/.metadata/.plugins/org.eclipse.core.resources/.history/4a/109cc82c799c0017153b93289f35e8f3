@@ -1,0 +1,12 @@
+/*
+ * Author: Patrick Löwe
+ * Program to calculate area of triangle, rectangle, or circle
+*/
+
+public class CircleRectangleTriangleArea {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

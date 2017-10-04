@@ -1,0 +1,17 @@
+import java.util.Scanner;
+/*
+ * Author: Patrick Löwe
+ * Program to read in 5 names from cmd 
+ * The print in alphabetical order
+*/
+public class MySortProgram { // class declaration
+
+	public static void main(String[] args) { // main method
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter 5 names: ");
+		String inputNames = scanner.nextLine();
+		System.out.print(inputNames);
+	}
+
+}

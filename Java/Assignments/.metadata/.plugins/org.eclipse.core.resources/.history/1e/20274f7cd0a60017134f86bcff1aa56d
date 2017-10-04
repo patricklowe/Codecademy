@@ -1,0 +1,8 @@
+
+public class RentProperty {
+		RentProperty(){}
+		
+		public void Rent(){
+		
+		}
+}

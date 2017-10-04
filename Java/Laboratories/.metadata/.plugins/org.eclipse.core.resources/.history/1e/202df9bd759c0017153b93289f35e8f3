@@ -1,0 +1,11 @@
+/*
+ * Author: Patrick Löwe
+ * Program to compare 2 numbers
+ */
+public class CompareTwoNumbers {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

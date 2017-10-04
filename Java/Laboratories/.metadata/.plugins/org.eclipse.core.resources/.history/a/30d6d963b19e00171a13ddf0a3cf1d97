@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ * Program to get 5 names and store in array
+ * Then search based on name requirement
+ */
+class Persons{
+	public String user_Name;
+	
+	public Persons(String n) {
+		user_Name = n;
+	}
+	
+	public String getDetails() {
+		return user_Name;
+	}
+}
+
+public class SearchMyStringArray { // class declaration
+
+	public static void main(String[] args) { // main method
+		String input_Name;
+		input_Name = JOptionPane.showMessageDialog(null, "Enter name: ");
+		
+		
+
+	}
+
+}

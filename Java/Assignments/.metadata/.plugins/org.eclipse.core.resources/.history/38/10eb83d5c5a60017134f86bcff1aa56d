@@ -1,0 +1,19 @@
+
+public class Apartment extends Property{
+		int storeyNum;
+		int bedNum;
+	
+	public Apartment(int StoreyNumber, int BedsNumber, int RentalCostPerDay, int TotalRentalDays, String Qwner, String PostalAddress) {
+		super(RentalCostPerDay,TotalRentalDays,Qwner,PostalAddress);
+		this.StoreyNumber = StoreyNumber;
+        this.BedsNumber=BedsNumber;
+    }
+	
+	public int getStoreyNumber(){
+		return StoreyNumber;
+	}
+	public int getBedsNumber(){
+		return BedsNumber;
+	}
+
+}

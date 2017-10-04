@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ */
+public class MySecret {
+
+	public static void main(String[] args) {
+		String user_Name = JOptionPane.showInputDialog("What is Your Name: ");
+		String programmer_Name = "Patrick";
+		
+		if(user_Name.equals(programmer_Name)) {
+			// Same Name
+			
+		}
+		else {
+			
+		}// different names
+	}
+
+}

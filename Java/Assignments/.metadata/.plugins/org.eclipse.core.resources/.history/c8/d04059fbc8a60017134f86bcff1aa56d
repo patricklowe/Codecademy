@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class PrintAllProperties {
+	PrintAllProperties(){}
+
+	
+	public  void PrintAllPropertiesUI(ArrayList<Apartment> apartments){
+		for(int i = 0; i < apartments.size(); i++)
+			JOptionPane.showMessageDialog(null,"Register Number; "+apartments.get(i).getRegisterNumber()+"\nOwner"+apartments.get(i).getOwner()+" "+apartments.get(i).getPostalAddress()+" "+apartments.get(i).getTotalRentalDays()+" "+apartments.get(i).getRentalCostPerDay()+" "+apartments.get(i).getStoreyNumber()+" "+apartments.get(i).getBedsNumber());
+	}
+}

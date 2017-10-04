@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class RentProperty {
+		RentProperty(){}
+		
+		public void Rent(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas){
+			int rentDays;
+			
+			for(int i = 0; i < apartments.size(); i++) {
+				rentDays = apartments.get(i).getTotalRentalDays();
+				JOptionPane.showMessageDialog(null, "a:"+apartments.get(i).getTotalRentalDays());
+				apartments.get(i).totalRentalDays += rentDays;
+				JOptionPane.showMessageDialog(null, "b:"+apartments.get(i).getTotalRentalDays());
+			}
+			
+			for(int i = 0; i < houses.size(); i++) {
+				rentDays = houses.get(i).getTotalRentalDays();
+				houses.get(i).totalRentalDays += rentDays;
+			}
+			
+			for(int i = 0; i < villas.size(); i++) {
+				rentDays = villas.get(i).getTotalRentalDays();
+				villas.get(i).totalRentalDays += rentDays;
+			}
+		}
+}

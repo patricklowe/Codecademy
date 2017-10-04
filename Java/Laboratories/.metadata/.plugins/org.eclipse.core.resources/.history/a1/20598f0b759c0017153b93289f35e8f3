@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ * Program to calculate the volume of a box
+ * Given length, width, and height
+ */
+public class BoxVolume {
+
+	public static void main(String[] args) {
+		String input_Length = JOptionPane.showInputDialog("Enter Length in metres: ");
+		String input_Width = JOptionPane.showInputDialog("Enter Width in metres: ");
+		String input_Height = JOptionPane.showInputDialog("Enter Height in metres: ");
+		
+		double box_Length = Double.parseDouble(input_Length);
+		double box_Width = Double.parseDouble(input_Width);
+		double box_Height = Double.parseDouble(input_Height);
+		
+		double box_Volume = box_Length * box_Height * box_Width;
+		
+		JOptionPane.showMessageDialog(null, "A box of width " + input_Width + "m, length " + input_Length + "m, and height " + input_Height + "m has a volume of " + box_Volume + " cubed");
+	}
+
+}

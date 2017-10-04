@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ * Program to compare 2 numbers
+ */
+public class CompareTwoNumbers {
+
+	public static void main(String[] args) {
+		String input_Num1 = JOptionPane.showInputDialog("Enter Number 1: ");
+		String input_Num2 = JOptionPane.showInputDialog("Enter Number 2: ");
+		
+		double Num1 = Double.parseDouble(input_Num1);
+		double Num2 = Double.parseDouble(input_Num2);
+		
+		if(Num1 < Num2) {
+			JOptionPane.showMessageDialog(null, "Num1(" + Num1 + ") is less than Num2(" + Num2 + ")");
+		}// if num1 < num2
+		else if (Num2 < Num1){
+			JOptionPane.showMessageDialog(null, "Num2(" + Num2 + ") is less than Num1(" + Num1 + ")");
+		}// Num2 is less
+		else {
+			JOptionPane.showMessageDialog(null, "Num1(" + Num1 + ") & Num2(" + Num2 + ") are equivalent");
+		}// numbers are equivalent
+	}// main method
+
+}// main class

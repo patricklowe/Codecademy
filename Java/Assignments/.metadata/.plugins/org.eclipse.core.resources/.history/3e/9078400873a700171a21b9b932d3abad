@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+/* Author Patrick Löwe
+ * Create a program to calculate the total income from a BnB Service*/
+
+public class MyBnB { // main class declaration
+
+	public static void main(String[] args) { // main method
+    	CalculateTotalIncome CTI  = new CalculateTotalIncome(); // calculates the total income
+    	PrintAllProperties pProperties = new PrintAllProperties(); // prints all properties to user
+    	
+    	ArrayList<Apartment> apartments = new ArrayList<Apartment>(); // array of apartments using Apartment Class structure
+    	ArrayList<House> houses = new ArrayList<House>(); // array of houses using the House Class structure
+    	ArrayList<Villa> villas = new ArrayList<Villa>(); // array of villas using Villa Class structure
+    	
+    	int pOption = 1; // allows the do loop to iterate at least once
+    	
+    	do {
+    	String strOption = JOptionPane.showInputDialog("1. Fill in Property\n2. Print Property \n3. Total Income\n0. Exit\nOption: ");
+    	pOption = Integer.parseInt(strOption);
+    	
+    	switch(pOption) {
+    		case 1: FillInProperties(apartments, houses, villas);
+    				break;
+    		case 2: pProperties.PrintProperties(apartments, houses, villas);
+    				break;
+    		case 3: CTI.CalculateTotallIncome(apartments, houses,villas);
+    				break;
+    		default:break;
+    	} // end of switch
+    	} while(pOption != 0 ); // end of while
+	}
+
+	public static void FillInProperties(ArrayList<Apartment> apartments, ArrayList<House> houses, ArrayList<Villa> villas){
+		RentProperty rProperties = new RentProperty();
+		
+		apartments.add(new Apartment(1,2,150,2,"George Cool","Paradise 3"));
+		apartments.add(new Apartment(2,3,85,8,"Johnny Cash","Somewhere 4"));
+		apartments.add(new Apartment(2,4,115,3,"Jane Doe","Devil's place 3"));
+		
+		houses.add(new House(1,50,50,2,"George NotSoCool","Marsh 17"));
+		houses.add(new House(4,65,85,8,"Johnny Broke","Anywhere 164"));
+		houses.add(new House(2,90,115,3,"John Doe","Angel Falls 3"));
+		
+		villas.add(new Villa(1,15,50,65,3,"Luke Warm","Kitchen Sink 4"));
+		villas.add(new Villa(4,25,115,180,4,"Dolly PardonMe","Nope Mansland"));
+		villas.add(new Villa(3,20,65,130,5,"Susie Grante","Unknown 74"));
+		
+		rProperties.Rent(apartments, houses, villas);
+	} // end of fill in properties
+
+}// end of Main Class

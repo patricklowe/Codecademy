@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+/* Author Patrick Löwe
+ * Create a program to calculate the total income from a BnB Service*/
+
+public class MyBnB { // class declaration
+
+	public static void main(String[] args) {
+    	CalculateTotalIncome CTI  = new CalculateTotalIncome();
+    	PrintAllProperties pPropties = new PrintAllProperties();
+    
+    	ArrayList<Apartment> apartments = new ArrayList<Apartment>();
+    	ArrayList<House> houses = new ArrayList<House>();
+    	
+    	int pOption = 1;
+    	do {
+    	String strOption = JOptionPane.showInputDialog("1. Fill in Property\n2. Print Property \n3. Total Income\n0. Exit\nOption: ");
+    	pOption = Integer.parseInt(strOption);
+    	
+    	switch(pOption) {
+    		case 1: FillInProperties(apartments, houses);
+    				break;
+    		case 2: pPropties.PrintAllPropertiesUI(apartments);
+    				break;
+    		case 3: JOptionPane.showMessageDialog(null, "The current total income for this fiscal year is:"+CTI.CalculateTotallIncome(apartments));
+    				break;
+    		default:break;
+    	} // end of switch
+    	} while(pOption != 0 ); // end of while
+	}
+
+	public static void FillInProperties(ArrayList<Apartment> apartments, ArrayList<House> houses){
+		apartments.add(new Apartment(1,2,150,2,"George Cool","Paradise 3"));
+		apartments.add(new Apartment(2,3,85,8,"Johnny Cash","Somewhere 4"));
+		apartments.add(new Apartment(2,4,115,3,"Jane Doe","Devil's place 3"));
+		
+		houses.add(new House(1,2,150,2,"George Cool","Paradise 3"));
+		houses.add(new House(2,3,85,8,"Johnny Cash","Somewhere 4"));
+		houses.add(new House(2,4,115,3,"Jane Doe","Devil's place 3"));
+	} // end of fill in properties
+
+}// end of Main Class

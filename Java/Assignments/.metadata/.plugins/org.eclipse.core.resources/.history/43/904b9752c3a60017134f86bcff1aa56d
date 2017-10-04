@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.awt.*;  
+import javax.swing.*;
+
+public class PrintAllProperties {
+	PrintAllProperties(){}
+
+	
+	public  void PrintAllPropertiesUI(ArrayList<Apartment> apartments,ArrayList<House> houses, ArrayList<Villa> villas ){
+    	int i;
+    	JFrame frame = new JFrame("MyBnB");
+    	frame.setLayout(new GridLayout(20, 0));
+    	frame.setSize(1000, 600);
+    	
+    	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+    	frame.getContentPane().add(new JOptionPane("Apartments:"));
+    	frame.getContentPane().add(new JOptionPane("Rrgister No     Owner       Address      Total Days rented   Cost-Per-Day     How-may-Story   How-Many beds"));
+    	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.PLAIN, 14));
+    	
+    	
+    	for(i=0;i<apartments.size();i++)
+        frame.getContentPane().add(new JOptionPane(("     "+apartments.get(i).getRegisterNumber()+"              "+apartments.get(i).getOwner()+"           "+apartments.get(i).getPostalAddress()+"                         "+apartments.get(i).getTotalRentalDays()+"                           "+
+				apartments.get(i).getRentalCostPerDay()+"                          "+apartments.get(i).getStoreyNumber()+"                     "+apartments.get(i).getBedsNumber())));
+    	
+    	
+    	
+    	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+    	frame.getContentPane().add(new JOptionPane("Houses:"));
+    	frame.getContentPane().add(new JOptionPane("Rrgister No     Owner       Address      Total Days rented   Cost-Per-Day     How-may-Story           Clearance"));
+    	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.PLAIN, 14));
+    
+      
+        for(i=0;i<houses.size();i++)
+        	
+        	frame.getContentPane().add(new JOptionPane("     "+houses.get(i).getRegisterNumber()+"              "+houses.get(i).getOwner()+"           "+houses.get(i).getPostalAddress()+"                         "+houses.get(i).getTotalRentalDays()+"                           "+
+        			houses.get(i).getRentalCostPerDay()+"                          "+houses.get(i).getTotalNumberStoreys()+"                     "+houses.get(i).getClearingFees()));
+        
+       
+        
+        UIManager.put("OptionPane.messageFont", new Font("Arial", Font.BOLD, 14));
+        frame.getContentPane().add(new JOptionPane("Villas:"));
+    	frame.getContentPane().add(new JOptionPane("Rrgister No     Owner       Address      Total Days rented   Cost-Per-Day     How-may-Story   How-Many-Rooms             tax per day"));
+    	UIManager.put("OptionPane.messageFont", new Font("Arial", Font.PLAIN, 14));
+        
+        
+        
+        for(i=0;i<villas.size();i++)
+        	frame.getContentPane().add(new JOptionPane("     "+villas.get(i).getRegisterNumber()+"              "+villas.get(i).getOwner()+"           "+villas.get(i).getPostalAddress()+"                         "+villas.get(i).getTotalRentalDays()+"                           "+
+        			villas.get(i).getRentalCostPerDay()+"                          "+villas.get(i).getNumberOfRooms()+"                     "+villas.get(i).getRoomServiceCostPerDay()+"                     "+villas.get(i).getTaxPerDay()));
+       
+//        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }    
+	
+	
+	
+}

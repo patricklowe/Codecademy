@@ -1,0 +1,41 @@
+public class Property {
+	// default or standard class for all properties
+	static int reg_Counter;
+	int regNum;
+	String propOwner;
+	String propAddress;
+	int rentCostDaily;
+	int totalRentalDays;
+	
+    public Property( int RentalCostPerDay, int TotalRentalDays, String Owner, String PostalAddress) {
+        this.regNum=reg_Counter++;
+		this.rentCostDaily = RentalCostPerDay;
+        this.totalRentalDays = TotalRentalDays;
+        this.propOwner = Owner;
+        this.propAddress = PostalAddress;
+    }
+	
+    public void RentProperty(int RentalDays){
+		totalRentalDays += RentalDays;
+	}
+	
+    public int getRegisterNumber(){
+		return regNum;
+	}
+	
+    public int getTotalRentalDays(){
+		return totalRentalDays;
+	}
+	
+    public int getRentalCostPerDay(){
+		return RentalCostPerDay;
+	}
+	
+    public String getOwner(){
+		return Owner;
+	}
+	
+    public String getPostalAddress(){
+		return PostalAddress;
+	}
+}

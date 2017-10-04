@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+/*
+ * Author: Patrick Löwe
+ * Program to calculate area of triangle, rectangle, or circle
+*/
+
+public class CircleRectangleTriangleArea {
+
+	public static void main(String[] args) {
+		String input_Option = JOptionPane.showInputDialog("Circle, Rectangle, or Triangle: ");
+		input_Option.toLowerCase();
+		
+		if(input_Option == "circle") {
+			JOptionPane.showMessageDialog(null, "Circle Selected");
+		}
+	}
+
+}

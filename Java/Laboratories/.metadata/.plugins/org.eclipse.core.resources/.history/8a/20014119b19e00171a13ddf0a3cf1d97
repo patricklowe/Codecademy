@@ -1,0 +1,19 @@
+/*
+ * Author: Patrick Löwe
+ * Program to get 5 names and store in array
+ * Then search based on name requirement
+ */
+class Person{
+	public String User_Name;
+	
+	
+}
+
+public class SearchMyStringArray { // class declaration
+
+	public static void main(String[] args) { // main method
+		
+
+	}
+
+}

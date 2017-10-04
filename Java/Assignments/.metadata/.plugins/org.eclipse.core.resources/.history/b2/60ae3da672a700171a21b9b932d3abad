@@ -1,0 +1,18 @@
+public class House extends Property{
+	int TotalNumberFloors;
+	int ClearingFees;
+	
+    public House(int TotalNumberFloors, int ClearingFees, int RentalCostDaily, int TotalRentDays, String Owner, String PostalAddress) {
+		super(RentalCostDaily,TotalRentDays, Owner,PostalAddress);
+		this.TotalNumberFloors = TotalNumberFloors;
+        this.ClearingFees = ClearingFees;
+    }
+	
+    public int getTotalNumberStoreys(){
+		return TotalNumberFloors;
+	}
+	
+    public int getClearingFees(){
+		return ClearingFees;
+	}
+}

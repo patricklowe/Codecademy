@@ -1,0 +1,18 @@
+public class Apartment extends Property{
+		int floorNum;
+		int bedNum;
+	
+	public Apartment(int FloorNumber, int Beds, int RentalCostDaily, int TotalRentDays, String Owner, String Address) {
+		super(RentalCostDaily,TotalRentDays,Owner,Address);
+		this.floorNum = FloorNumber;
+        this.bedNum = Beds;
+    }
+	
+	public int getStoreyNumber(){
+		return floorNum;
+	}
+	public int getBedsNumber(){
+		return bedNum;
+	}
+
+}
